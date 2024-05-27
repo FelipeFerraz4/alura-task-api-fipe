@@ -1,12 +1,11 @@
 package com.bluefox.model;
 
+import java.util.List;
+
 import com.fasterxml.jackson.annotation.JsonAlias;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
-public record VehicleModelData(@JsonAlias("nome") String vehicleModel) {
-
-    // public getVehicleModel() {
-    //     return vehicleModel;
-    // }
+public record Models(@JsonAlias("modelos") List<Data> model) {
+    
 }
